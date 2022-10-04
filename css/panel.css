@@ -1,0 +1,58 @@
+#panel {
+  background-color: var(--light__background-color);
+  grid-area: panel;
+  border-top: 1px solid var(--column__border-color);
+  border-right: 1px solid var(--column__border-color);
+  border-bottom: 1px solid var(--column__border-color);
+  border-radius: 0 var(--border__radius) var(--border__radius) 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  left: 1075px;
+  top: 0px;
+  height: 100vh;
+  width: 50px;
+}
+
+#panel__bottom-menu-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 27px;
+  height: 100px;
+}
+
+.panel__button {
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+  border: 1px solid var(--column__border-color);
+  background-color: var(--light__background-color);
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.panel__button:hover {
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+  border: 1px solid #555;
+  background-color: var(--light__background-color);
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease-out;
+}
+
+#panel__other-button {
+  margin-top: 25px;
+}
+
+@media (max-width: 768px) {
+  #panel {
+    display: none;
+    border-radius: 0;
+  }
+}

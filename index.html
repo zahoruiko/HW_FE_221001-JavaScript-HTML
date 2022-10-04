@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"
+    />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/aside.css" />
+    <link rel="stylesheet" href="css/inbox.css" />
+    <link rel="stylesheet" href="css/chat.css" />
+    <link rel="stylesheet" href="css/panel.css" />
+
+    <script>
+      function toggleInbox() {
+        var sidebar = document.querySelector(".inbox__main-wrapper");
+        sidebar.classList.toggle("inbox__main-wrapper-open");
+      }
+      function toggleChat() {
+        var sidebar = document.querySelector(".chat__main-wrapper");
+        sidebar.classList.toggle("chat__main-wrapper-open");
+      }
+    </script>
+
+    <title>Shark - Chat</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- --------- Aside ---------- -->
+      <aside>
+        <div id="aside-wrapper">
+          <div id="site-logo">
+            <figure id="logo">
+              <img id="site_logo_image" src="images/logo.png" alt="" />
+            </figure>
+          </div>
+          <nav>
+            <menu>
+              <li class="menu-item">
+                <button class="menu-item__button">
+                  <div class="menu-item__image">
+                    <i class="las la-tachometer-alt"></i>
+                  </div>
+                  Dashboard
+                </button>
+              </li>
+              <li class="menu-item">
+                <button class="menu-item__button">
+                  <div class="menu-item__image">
+                    <i class="las la-chart-bar"></i>
+                  </div>
+                  Statistic
+                </button>
+              </li>
+              <li class="menu-item">
+                <button class="menu-item__button">
+                  <div class="menu-item__image">
+                    <i class="las la-question"></i>
+                  </div>
+                  Support
+                </button>
+              </li>
+              <li class="menu-item">
+                <button
+                  class="menu-item__button menu-item__button--active"
+                  onclick="toggleInbox()"
+                >
+                  <div class="menu-item__image">
+                    <i class="las la-inbox"></i>
+                  </div>
+                  Inbox
+                </button>
+              </li>
+              <li class="menu-item">
+                <button class="menu-item__button">
+                  <div class="menu-item__image">
+                    <i class="las la-rocket"></i>
+                  </div>
+                  Goals
+                </button>
+              </li>
+              <li class="menu-item">
+                <button class="menu-item__button">
+                  <div class="menu-item__image">
+                    <i class="las la-link"></i>
+                  </div>
+                  Links
+                </button>
+              </li>
+            </menu>
+          </nav>
+        </div>
+
+        <div id="projects">
+          <div id="projects-title">PROJECTS</div>
+          <div id="projects-list">
+            <div class="project-item">
+              <span class="project-item__name-wrapper">
+                <div class="project-image project-image__color--orange"></div>
+                <div class="project-name">Calipso</div>
+              </span>
+              <div class="project-result">+4</div>
+            </div>
+
+            <div class="project-item">
+              <span class="project-item__name-wrapper">
+                <div
+                  class="project-image project-image__color--lightblue"
+                ></div>
+                <div class="project-name">BWS bank</div>
+              </span>
+              <div class="project-result">+5</div>
+            </div>
+
+            <div class="project-item">
+              <span class="project-item__name-wrapper">
+                <div class="project-image project-image__color--magenta"></div>
+                <div class="project-name">Unicom app</div>
+              </span>
+              <div class="project-result">+1</div>
+            </div>
+
+            <div class="project-item">
+              <span class="project-item__name-wrapper">
+                <div
+                  class="project-image project-image__color--lightgreen"
+                ></div>
+                <div class="project-name">Salt</div>
+              </span>
+              <div class="project-result">+3</div>
+            </div>
+          </div>
+          <button id="projects__show-more-button">Show more</button>
+        </div>
+      </aside>
+
+      <!-- --------- Inbox ---------- -->
+      <div class="inbox__main-wrapper">
+        <div id="inbox-header">
+          <span id="inbox-header__title" onclick="toggleInbox()">Inbox</span>
+          <div id="inbox-header__button">+</div>
+        </div>
+
+        <div id="inbox__output-mode-wrapper">
+          <div id="inbox__output-mode-switcher">
+            <button
+              id="inbox__output-mode--1"
+              class="inbox__output-mode-button inbox__mode--active"
+            >
+              General
+            </button>
+            <button
+              id="inbox__output-mode--2"
+              class="inbox__output-mode-button"
+            >
+              Total
+            </button>
+          </div>
+        </div>
+
+        <div id="inbox">
+          <div id="contacts-wrapper">
+            <div id="contacts-list">
+              <div id="1" class="contact__info">
+                <div class="contact-info__avatar">
+                  <img
+                    class="contact-info__image"
+                    src="https://via.placeholder.com/40x40"
+                    alt=""
+                  />
+                  <div class="contact-info__online-info"></div>
+                </div>
+                <div class="contact-info__wrapper">
+                  <div class="contact-info__name">Michael.B</div>
+                  <div class="contact-info__job-titel">Project manager</div>
+                  <div class="contact-info__message-subject">
+                    Sent you the file
+                  </div>
+                </div>
+                <div class="contact-info__new-messages-amount">3</div>
+              </div>
+
+              <div id="2" class="contact__info">
+                <div class="contact-info__avatar">
+                  <img
+                    class="contact-info__image"
+                    src="https://via.placeholder.com/40x40"
+                    alt=""
+                  />
+                  <div class="contact-info__online-info--active"></div>
+                </div>
+                <div class="contact-info__wrapper" onclick="toggleChat()">
+                  <div class="contact-info__name">Katie.W</div>
+                  <div class="contact-info__job-titel">
+                    Middle designer sdfgsdfgsdfg sdfgsdfg sdfgsdfg
+                  </div>
+                  <div class="contact-info__message-subject">
+                    See you tommorrow ...
+                  </div>
+                </div>
+                <div class="contact-info__new-messages-amount">2</div>
+              </div>
+
+              <div id="3" class="contact__info">
+                <div class="contact-info__avatar">
+                  <img
+                    class="contact-info__image"
+                    src="https://via.placeholder.com/40x40"
+                    alt=""
+                  />
+                  <div class="contact-info__online-info--active"></div>
+                </div>
+                <div class="contact-info__wrapper">
+                  <div class="contact-info__name">Frannie.K</div>
+                  <div class="contact-info__job-titel">SMM manager</div>
+                  <div class="contact-info__message-subject">
+                    See you tommorrow...
+                  </div>
+                </div>
+                <div class="contact-info__new-messages-amount">1</div>
+              </div>
+
+              <div id="4" class="contact__info--no-messages">
+                <div class="contact-info__avatar">
+                  <img
+                    class="contact-info__image"
+                    src="https://via.placeholder.com/40x40"
+                    alt=""
+                  />
+                  <div class="contact-info__online-info"></div>
+                </div>
+                <div class="contact-info__wrapper">
+                  <div class="contact-info__name">Felix.K</div>
+                  <div class="contact-info__job-titel">UI Designer</div>
+                  <div class="contact-info__message-subject">
+                    See you tommorrow...
+                  </div>
+                </div>
+                <div class="contact-info__new-messages-amount--disabled">2</div>
+              </div>
+
+              <div id="5" class="contact__info--no-messages">
+                <div class="contact-info__avatar">
+                  <img
+                    class="contact-info__image"
+                    src="https://via.placeholder.com/40x40"
+                    alt=""
+                  />
+                  <div class="contact-info__online-info--active"></div>
+                </div>
+                <div class="contact-info__wrapper">
+                  <div class="contact-info__name">Felix.K</div>
+                  <div class="contact-info__job-titel">UI Designer</div>
+                  <div class="contact-info__message-subject">
+                    See you tommorrow...
+                  </div>
+                </div>
+                <div class="contact-info__new-messages-amount--disabled">2</div>
+              </div>
+
+              <div id="6" class="contact__info--no-messages">
+                <div class="contact-info__avatar">
+                  <img
+                    class="contact-info__image"
+                    src="https://via.placeholder.com/40x40"
+                    alt=""
+                  />
+                  <div class="contact-info__online-info"></div>
+                </div>
+                <div class="contact-info__wrapper">
+                  <div class="contact-info__name">Felix.K</div>
+                  <div class="contact-info__job-titel">UI Designer</div>
+                  <div class="contact-info__message-subject">
+                    See you tommorrow...
+                  </div>
+                </div>
+                <div class="contact-info__new-messages-amount--disabled">2</div>
+              </div>
+
+              <div id="7" class="contact__info--no-messages">
+                <div class="contact-info__avatar">
+                  <img
+                    class="contact-info__image"
+                    src="https://via.placeholder.com/40x40"
+                    alt=""
+                  />
+                  <div class="contact-info__online-info--active"></div>
+                </div>
+                <div class="contact-info__wrapper">
+                  <div class="contact-info__name">Felix.K</div>
+                  <div class="contact-info__job-titel">UI Designer</div>
+                  <div class="contact-info__message-subject">
+                    See you tommorrow...
+                  </div>
+                </div>
+                <div class="contact-info__new-messages-amount--disabled">2</div>
+              </div>
+
+              <div id="8" class="contact__info--no-messages">
+                <div class="contact-info__avatar">
+                  <img
+                    class="contact-info__image"
+                    src="https://via.placeholder.com/40x40"
+                    alt=""
+                  />
+                  <div class="contact-info__online-info"></div>
+                </div>
+                <div class="contact-info__wrapper">
+                  <div class="contact-info__name">Felix.K</div>
+                  <div class="contact-info__job-titel">UI Designer</div>
+                  <div class="contact-info__message-subject">
+                    See you tommorrow...
+                  </div>
+                </div>
+                <div class="contact-info__new-messages-amount--disabled">2</div>
+              </div>
+
+              <div id="9" class="contact__info--no-messages">
+                <div class="contact-info__avatar">
+                  <img
+                    class="contact-info__image"
+                    src="https://via.placeholder.com/40x40"
+                    alt=""
+                  />
+                  <div class="contact-info__online-info--active"></div>
+                </div>
+                <div class="contact-info__wrapper">
+                  <div class="contact-info__name">Felix.K</div>
+                  <div class="contact-info__job-titel">UI Designer</div>
+                  <div class="contact-info__message-subject">
+                    See you tommorrow...
+                  </div>
+                </div>
+                <div class="contact-info__new-messages-amount--disabled">2</div>
+              </div>
+
+              <div id="10" class="contact__info--no-messages">
+                <div class="contact-info__avatar">
+                  <img
+                    class="contact-info__image"
+                    src="https://via.placeholder.com/40x40"
+                    alt=""
+                  />
+                  <div class="contact-info__online-info"></div>
+                </div>
+                <div class="contact-info__wrapper">
+                  <div class="contact-info__name">Felix.K</div>
+                  <div class="contact-info__job-titel">UI Designer</div>
+                  <div class="contact-info__message-subject">
+                    See you tommorrow...
+                  </div>
+                </div>
+                <div class="contact-info__new-messages-amount--disabled">2</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- --------- Chat ---------- -->
+      <div class="chat__main-wrapper">
+        <div id="chat-header">
+          <div id="chat__contact-wrapper" onclick="toggleChat()">
+            <div id="chat-contact-info__avatar">
+              <img
+                id="chat-contact-info__image"
+                src="https://via.placeholder.com/40x40"
+                alt=""
+              />
+              <div id="chat-contact-info__online-info--active"></div>
+            </div>
+            <div id="chat-contact-info__wrapper">
+              <div id="chat-contact__name">Katie.W</div>
+              <div id="chat-contact__status">Online</div>
+            </div>
+          </div>
+          <div id="chat-header-wrapper">
+            <span id="chat__search-wrapper">
+              <input
+                type="text"
+                name="chat-search-form"
+                id="chat-search-form"
+                placeholder="Search ..."
+              />
+              <span id="chat__search-form-symbol">
+                <i class="las la-search"></i>
+              </span>
+            </span>
+
+            <button
+              id="chat-header__microphone-button"
+              class="chat-header__panel-button"
+            >
+              <i class="las la-microphone"></i>
+            </button>
+            <button
+              id="chat-header__camera-button"
+              class="chat-header__panel-button"
+            >
+              <i class="las la-video"></i>
+            </button>
+          </div>
+        </div>
+
+        <div id="chat">
+          <div id="chat-messages__list">
+            <div class="chat-date">September 24, Samstag</div>
+
+            <div class="chat-message--inbound">
+              <div class="chat-message__inbound-wrapper">
+                <div class="chat-message-time--inbound">11:00</div>
+                <div class="chat-message__inbound-content">Hi! 🙂</div>
+              </div>
+            </div>
+            <div class="chat-message--outbound">
+              <div class="chat-message__outbound-wrapper">
+                <div class="chat-message-time--outbound">11:01</div>
+                <div class="chat-message__outbound-content">
+                  Wo?)) &#128518;&#128518;&#128518;
+                </div>
+                <div class="chat-message--viewed">VIEWED AT</div>
+              </div>
+            </div>
+
+            <div class="chat-message--inbound">
+              <div class="chat-message__inbound-wrapper">
+                <time class="chat-message-time--inbound">11:10</time>
+                <div class="chat-message__inbound-content">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod
+                  molestiae sapiente rem suscipit voluptatum. Harum distinctio
+                  vitae fugit eius doloremque quisquam officiis minus
+                  perferendis beatae? Ad debitis eligendi aut praesentium?
+                </div>
+              </div>
+            </div>
+            <div class="chat-message--outbound">
+              <div class="chat-message__outbound-wrapper">
+                <time class="chat-message-time--outbound">11:12</time>
+                <div class="chat-message__outbound-content">
+                  &#10060; Lorem ipsum dolor sit amet, consectetur adipisicing
+                  elit. Doloremque similique quasi, facere exercitationem vitae
+                  quisquam reiciendis, assumenda nam pariatur porro, beatae
+                  consequuntur impedit delectus quis enim consequatur velit cum
+                  explicabo. &#128528;
+                </div>
+                <div class="chat-message--viewed">VIEWED AT</div>
+              </div>
+            </div>
+
+            <div class="chat-message--inbound">
+              <div class="chat-message__inbound-wrapper">
+                <time class="chat-message-time--inbound">11:20</time>
+                <div class="chat-message__inbound-content">
+                  <div class="chat-message__attachment">
+                    <div class="chat-message__attachment-image-wrapper">
+                      <img
+                        src="https://via.placeholder.com/40x40"
+                        alt=""
+                        class="chat-message__attachment-image"
+                      />
+                    </div>
+                    <div class="chat-message__attachment-info">
+                      <div class="chat-message__attachment-name">
+                        file-name.ext
+                      </div>
+                      <div class="chat-message__attachment-size">10 Mb</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="chat-message--inbound">
+              <div class="chat-message__inbound-wrapper">
+                <time class="chat-message-time--inbound">11:30</time>
+                <div class="chat-message__inbound-content">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod
+                  molestiae sapiente rem suscipit voluptatum. Harum distinctio
+                  vitae fugit eius doloremque quisquam officiis minus
+                  perferendis beatae? Ad debitis eligendi aut praesentium?
+                </div>
+              </div>
+            </div>
+            <div class="chat-message--outbound">
+              <div class="chat-message__outbound-wrapper">
+                <time class="chat-message-time--outbound">11:31</time>
+                <div class="chat-message__outbound-content">
+                  &#9994; Lorem ipsum dolor sit amet, consectetur adipisicing
+                  elit. Doloremque similique quasi, facere exercitationem vitae
+                  quisquam reiciendis, assumenda nam pariatur porro, beatae
+                  consequuntur impedit delectus quis enim consequatur velit cum
+                  explicabo. &#128579; &#128508;
+                </div>
+                <div class="chat-message--viewed">VIEWED AT</div>
+              </div>
+            </div>
+
+            <div class="chat-message--inbound">
+              <div class="chat-message__inbound-wrapper">
+                <time class="chat-message-time--inbound">11:40</time>
+                <div class="chat-message__inbound-content">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod
+                  molestiae sapiente rem suscipit voluptatum. Harum distinctio
+                  vitae fugit eius doloremque quisquam officiis minus
+                  perferendis beatae? Ad debitis eligendi aut praesentium?
+                </div>
+              </div>
+            </div>
+            <div class="chat-message--outbound">
+              <div class="chat-message__outbound-wrapper">
+                <time class="chat-message-time--outbound">11:44</time>
+                <div class="chat-message__outbound-content">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Doloremque similique quasi, facere exercitationem vitae
+                  quisquam reiciendis, assumenda nam pariatur porro, beatae
+                  consequuntur impedit delectus quis enim consequatur velit cum
+                  explicabo.
+                </div>
+                <div class="chat-message--viewed">VIEWED AT</div>
+              </div>
+            </div>
+
+            <div class="chat-date">September 25, Sonntag</div>
+
+            <div class="chat-message--inbound">
+              <div class="chat-message__inbound-wrapper">
+                <time class="chat-message-time--inbound">11:51</time>
+                <div class="chat-message__inbound-content">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod
+                  molestiae sapiente rem suscipit voluptatum. Harum distinctio
+                  vitae fugit eius doloremque quisquam officiis minus
+                  perferendis beatae? Ad debitis eligendi aut praesentium?
+                </div>
+              </div>
+            </div>
+            <div class="chat-message--outbound">
+              <div class="chat-message__outbound-wrapper">
+                <time class="chat-message-time--outbound">11:53</time>
+                <div class="chat-message__outbound-content">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Doloremque similique quasi, facere exercitationem vitae
+                  quisquam reiciendis, assumenda nam pariatur porro, beatae
+                  consequuntur impedit delectus quis enim consequatur velit cum
+                  explicabo.
+                </div>
+                <div class="chat-message--viewed">VIEWED AT</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="new-message-form">
+          <textarea
+            name="new-message__input-form"
+            id="new-message__input-form"
+            placeholder="Write a message..."
+          ></textarea>
+          <div id="message-form__buttons-wrapper">
+            <button id="" class="message-form__button">
+              <i class="las la-image"></i>
+            </button>
+            <button id="" class="message-form__button">
+              <i class="las la-microphone"></i>
+            </button>
+            <button
+              id=""
+              class="message-form__button message-form__button--blue"
+            >
+              <i class="las la-paper-plane"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- --------- Panel ---------- -->
+      <div id="panel">
+        <div id="menu-other">
+          <button id="panel__other-button" class="panel__button">
+            <b>&bull;&bull;</b>
+          </button>
+        </div>
+        <div id="panel__bottom-menu-wrapper">
+          <button id="panel__warning-button" class="panel__button">!</button>
+          <button id="panel__mute-button" class="panel__button">
+            <i class="las la-volume-mute"></i>
+          </button>
+          <button id="panel__trash-button" class="panel__button">
+            <i class="las la-trash-alt"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<!-- https://dribbble.com/shots/18452537-Inbox-Property-Management -->
