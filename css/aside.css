@@ -11,6 +11,9 @@ aside {
   position: fixed;
   height: 100vh;
   background: var(--dark__background-color);
+  border-top: 1px solid var(--column__border-color);
+  border-left: 1px solid var(--column__border-color);
+  border-bottom: 1px solid var(--column__border-color);
   grid-area: aside;
   display: flex;
   flex-direction: column;
